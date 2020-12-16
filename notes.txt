@@ -1,0 +1,16 @@
+Python, Java, C#, C++
+    - multithreading
+        - resource intensive (1 MB)
+        - maintainable
+
+Node.js
+    - Single Threaded Event Loop
+    - resource light
+    - difficult to maintain (for CPU intensive operations)
+
+
+Go
+    concurrency is a LANGUAGE FEATURE
+    go routines
+
+result = await doSomething()
