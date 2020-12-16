@@ -76,3 +76,5 @@ Language Features
 4 Type Conversion
     GOLANG do not support implicity type conversion (all type conversions have to be explicit).
     syntax = Type(Value)
+
+5. Closure
