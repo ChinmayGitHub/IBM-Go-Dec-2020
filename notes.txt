@@ -79,6 +79,11 @@ Language Features
         use indexer to access the values
         
     slice
+        built on array (internally uses an array)
+        can be of varying size
+        it has to be of the same type
+        supports the slice operation
+        
     map
 
 4 Type Conversion
