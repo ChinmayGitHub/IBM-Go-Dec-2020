@@ -41,16 +41,35 @@ var (
 )
 */
 
+//
+/*
 var (
 	name, age, location = "Magesh Kuppan", 35, "Bengaluru"
 )
+*/
 
 func init() { // function executed when the package is initialized
 
 }
 
 func main() {
-	fmt.Println("Welcome to Golang!")
+
+	const pi = 3.14
+
+	const (
+		red   = 1
+		green = 2
+		blue  = 3
+	)
+
+	name := "Magesh Kuppan"
+	age := 45
+	location := "Bengaluru"
+
+	fmt.Println(pi)
+	s := fmt.Sprintf("%s (%d) %s\n", name, age, location)
+	fmt.Printf("%T (%T) %T\n", name, age, location)
+	fmt.Println(s)
 }
 
 //interfaces

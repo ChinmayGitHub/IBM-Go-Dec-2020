@@ -11,6 +11,64 @@ Node.js
 
 Go
     concurrency is a LANGUAGE FEATURE
-    go routines
+            go, chan, select, range
+        go routines
+        Internal scheduler  (built in the runtime)
+        thousands of goroutines can be executed in a SINGLE Thread
+        ONLY 2 kb / goroutine
 
-result = await doSomething()
+    Simple Language
+        ONLY 25 keywords
+        NO classes (func [behavior], struct [state], interface [abstraction])
+            Prefer composition over inheritence
+        No access modifiers
+        Support for modules
+        Package management is builtin as a part of the go tooling infrastructure
+        Support for pointers
+        Support for Higher order functions
+            functions as data
+            functions can be assigned to variables
+            functions can be passed as arguments to other functions
+            functions can be returned as return values
+
+
+Class
+    Blueprint for an object
+    Encapsulation of State & Behavior
+        Prefer composition over inheritence
+
+
+Languge Basics
+SDK
+Concurrency
+Services
+Misc
+    Testing
+    Benchmarking
+
+
+Language Features
+1. Variables
+2. Contants
+3. Datatypes
+    bool
+    string
+    uint
+        uint8
+        unit16
+        unit32
+        uint64
+    int
+        int8
+        int16
+        int32
+        int64
+    
+    float32
+    float64
+
+    complex64
+    complex128
+
+    byte (alias for uint8)
+    rune (alias for int32) (respresents a Unicode code point)
