@@ -26,9 +26,23 @@ func divide(x int, y int) (int, int) {
 	return result, remainder
 }
 
+func genEvenNumbers() func() int {
+	n := 0
+	return func() int {
+		n += 2
+		return n
+	}
+}
+
 func main() {
 	fmt.Println(add(100, 200))
 	result, remainder := divide(10, 3)
 	fmt.Println(result, remainder)
 	fmt.Println(sum(10, 20, 30, 40))
+
+	getEvenNo := genEvenNumbers()
+	fmt.Println(getEvenNo())
+	fmt.Println(getEvenNo())
+	fmt.Println(getEvenNo())
+	fmt.Println(getEvenNo())
 }
