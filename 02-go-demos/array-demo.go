@@ -10,4 +10,5 @@ func main() {
 
 	newNos := [5]int{3, 1, 4, 2, 5}
 	fmt.Println(newNos)
+	fmt.Println(newNos[:2])
 }

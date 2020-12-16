@@ -83,8 +83,11 @@ Language Features
         can be of varying size
         it has to be of the same type
         supports the slice operation
-        
+
     map
+        collection of key/value pairs
+        dynamic size
+        type of the key and type of the value can vary
 
 4 Type Conversion
     GOLANG do not support implicity type conversion (all type conversions have to be explicit).
