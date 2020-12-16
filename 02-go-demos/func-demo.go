@@ -45,4 +45,7 @@ func main() {
 	fmt.Println(getEvenNo())
 	fmt.Println(getEvenNo())
 	fmt.Println(getEvenNo())
+
+	getNewEvenNo := genEvenNumbers()
+	fmt.Println(getNewEvenNo())
 }
