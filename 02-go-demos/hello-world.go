@@ -70,6 +70,21 @@ func main() {
 	s := fmt.Sprintf("%s (%d) %s\n", name, age, location)
 	fmt.Printf("%T (%T) %T\n", name, age, location)
 	fmt.Println(s)
+
+	//type conversion
+	/*
+		var v1 int32 = 100
+		var v2 int64
+		var f float64
+		v2 = int64(v1)
+		f = float64(v1)
+		fmt.Printf("%v, %v\n", v2, f)
+	*/
+
+	var v1 float64 = 20000.9999
+	var v2 int8
+	v2 = int8(v1)
+	fmt.Printf("%v\n", v2)
 }
 
 //interfaces

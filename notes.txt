@@ -72,3 +72,7 @@ Language Features
 
     byte (alias for uint8)
     rune (alias for int32) (respresents a Unicode code point)
+
+4 Type Conversion
+    GOLANG do not support implicity type conversion (all type conversions have to be explicit).
+    syntax = Type(Value)
