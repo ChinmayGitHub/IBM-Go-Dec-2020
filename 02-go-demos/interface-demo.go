@@ -40,4 +40,5 @@ func main() {
 
 	p := &Product{500, "Pen", 10}
 	printData(p)
+
 }
