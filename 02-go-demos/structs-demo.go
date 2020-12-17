@@ -26,6 +26,7 @@ func  toggleEmploymentStatus (p *Person) {
 }
 */
 
+//as methods
 func (p Person) display(format string) string {
 	//fmt.Printf(format, p.Id, p.Name, p.IsEmployed)
 	return fmt.Sprintf(format, p.Id, p.Name, p.IsEmployed)
