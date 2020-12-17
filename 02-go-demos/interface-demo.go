@@ -2,29 +2,42 @@ package main
 
 import "fmt"
 
-type I interface {
-	Get() int
-	Put(int)
+type Employee struct {
+	Id   int
+	Name string
+	City string
 }
 
-type S struct {
-	i int
+func (e *Employee) Display() {
+	fmt.Printf("Employee = %v\n", e)
 }
 
-func (p *S) Get() int {
-	return p.i
+/* func printData(e Employee){
+	e.Display()
+} */
+
+type Product struct {
+	Id   int
+	Name string
+	Cost float64
 }
 
-func (p *S) Put(i int) {
-	p.i = i
+type Displayable interface {
+	Display()
 }
 
-func fn(p I) {
-	p.Put(10)
-	fmt.Println(p.Get())
+func (p *Product) Display() {
+	fmt.Printf("Product = %v\n", p)
+}
+
+func printData(obj Displayable) {
+	obj.Display()
 }
 
 func main() {
-	obj := &S{i: 5}
-	fn(obj)
+	e := &Employee{100, "Magesh", "Bengaluru"}
+	printData(e)
+
+	p := &Product{500, "Pen", 10}
+	printData(p)
 }
