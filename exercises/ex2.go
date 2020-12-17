@@ -2,12 +2,13 @@ package main
 
 import "fmt"
 
-package main(){
+func main() {
 	var i int = 10
-	increment(/*  */)
+	increment(&i)
 	fmt.Println(i) //=> 11
 }
 
-func increment(/*  */){
-
+func increment(p *int) {
+	*p++
+	return
 }
