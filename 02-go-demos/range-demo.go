@@ -14,8 +14,10 @@ func main() {
 	}
 
 	colors := map[string]int{"red": 1, "green": 2, "blue": 3}
-
+	fmt.Println(colors)
 	for key, value := range colors {
 		fmt.Println(key, value)
 	}
+
+	//fmt.Println(result)
 }
