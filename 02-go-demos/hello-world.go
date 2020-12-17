@@ -1,6 +1,10 @@
 package main
 
-import "fmt" //importing dependant packages
+import (
+	"fmt"
+
+	"./utils"
+)
 
 //package level variables
 
@@ -49,7 +53,7 @@ var (
 */
 
 func init() { // function executed when the package is initialized
-
+	utils.Test()
 }
 
 func main() {
@@ -85,6 +89,23 @@ func main() {
 	var v2 int8
 	v2 = int8(v1)
 	fmt.Printf("%v\n", v2)
+
+	fmt.Println("new & make")
+	/*
+		var v *int
+		//fmt.Println(*v)
+		fmt.Println(v) //<nil>
+		v = new(int)
+		fmt.Println(*v) //
+		fmt.Println(v)  //0xc00004c088
+	*/
+
+	var m map[string]string
+	fmt.Printf("m: %p %#v \n", &m, m) //m: 0xc042068018 map[string]string(nil)
+	mv := new(map[string]string)
+	fmt.Printf("mv: %p %#v \n", &mv, mv) //mv: 0xc000006028 &map[string]string(nil)
+	(*mv)["a"] = "a"
+	fmt.Printf("mv: %p %#V \n ", &mv, mv) //Error panic: assignment to entry in nil map
 }
 
 //interfaces
