@@ -1,11 +1,15 @@
 package main
 
 import (
+	"bufio"
 	"fmt"
 	"net"
+	"os"
 )
 
 func handleRequest(conn net.Conn) {
+	var response string
+	inputReader := bufio.NewReader(os.Stdin)
 	for {
 		buff := make([]byte, 512)
 		_, err := conn.Read(buff)
@@ -14,6 +18,9 @@ func handleRequest(conn net.Conn) {
 			break
 		}
 		fmt.Printf("Received data : %v", string(buff))
+		fmt.Println("Enter the response :")
+		response, _ = inputReader.ReadString('\n')
+		conn.Write([]byte(response))
 	}
 }
 
