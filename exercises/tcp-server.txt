@@ -1,0 +1,8 @@
+1. Make the client interactive (Receive messages from the server and display that too)
+2. Conver the server into a chat server (message from one client should be broadcast to all the client)
+3. Enable the server to send targetted messages
+    (
+        create mechanisms to uniquely identify the clients
+        create an application protocol for this communication
+            client1 : dummy message
+    )
