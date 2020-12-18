@@ -28,11 +28,17 @@ func goRoutine3(wg *sync.WaitGroup) {
 
 func main() {
 	wg := &sync.WaitGroup{}
-	wg.Add(1)
+	/*
+		wg.Add(1)
+		go goRoutine1(wg)
+		wg.Add(1)
+		go goRoutine2(wg)
+		wg.Add(1)
+		go goRoutine3(wg)
+	*/
+	wg.Add(3)
 	go goRoutine1(wg)
-	wg.Add(1)
 	go goRoutine2(wg)
-	wg.Add(1)
 	go goRoutine3(wg)
 	wg.Wait()
 	fmt.Println("main completed")
