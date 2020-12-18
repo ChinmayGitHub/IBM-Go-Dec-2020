@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"time"
+)
 
 func fibonacci(c chan int, quit chan int) {
 	x, y := 0, 1
@@ -19,11 +22,22 @@ func main() {
 	c := make(chan int)
 	quit := make(chan int)
 	go func() {
-		for i := 0; i < 10; i++ {
+		for {
+			time.Sleep(time.Millisecond * 500)
 			fmt.Println(<-c)
 		}
-		quit <- 0
 	}()
-	fibonacci(c, quit)
+	/*
+		go func() {
+			var input string
+			fmt.Scanln(&input)
+			quit <- 0
+		}()
+		fibonacci(c, quit)
+	*/
+
+	go fibonacci(c, quit)
+	var input string
+	fmt.Scanln(&input)
 
 }
