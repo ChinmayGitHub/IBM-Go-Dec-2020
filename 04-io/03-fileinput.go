@@ -9,6 +9,7 @@ import (
 
 func main() {
 	inputFile, inputError := os.Open("data.dat")
+	defer inputFile.Close()
 	if inputError != nil {
 		fmt.Println(inputError)
 		return
@@ -21,5 +22,5 @@ func main() {
 		}
 		fmt.Println(line)
 	}
-	inputFile.Close()
+
 }
