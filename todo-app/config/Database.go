@@ -18,7 +18,7 @@ type DBConfig struct {
 
 func BuildConfig() *DBConfig {
 	return &DBConfig{
-		Host:     "127.0.0.1",
+		Host:     "localhost",
 		Port:     3306,
 		User:     "root",
 		DBName:   "todos",
@@ -27,8 +27,10 @@ func BuildConfig() *DBConfig {
 }
 
 func DbURL(dbConfig *DBConfig) string {
-	return fmt.Sprintf(
-		"%s:%s@tcp(%s:%d))/%s?charset=utf8&parseTime=True&loc=Local",
+	s := fmt.Sprintf(
+		"%s:%s@tcp(%s:%d)/%s?charset=utf8&parseTime=True&loc=Local",
 		dbConfig.User, dbConfig.Password, dbConfig.Host, dbConfig.Port, dbConfig.DBName,
 	)
+	fmt.Println(s)
+	return s
 }

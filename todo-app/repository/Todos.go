@@ -2,8 +2,8 @@ package repository
 
 import (
 	_ "github.com/go-sql-driver/mysql"
-	"github.com/tkmagesh/IBM-Go-Dec-2020/todo-app/config"
-	"github.com/tkmagesh/IBM-Go-Dec-2020/todo-app/models"
+	config "github.com/tkmagesh/IBM-Go-Dec-2020/todo-app/config"
+	models "github.com/tkmagesh/IBM-Go-Dec-2020/todo-app/models"
 )
 
 func GetAllTodos(todo *[]models.Todo) (err error) {
@@ -28,7 +28,7 @@ func GetATodo(todo *models.Todo, id string) (err error) {
 }
 
 func UpdateATodo(todo *models.Todo, id string) (err error) {
-	config.DB.save(todo)
+	config.DB.Save(todo)
 	return nil
 }
 

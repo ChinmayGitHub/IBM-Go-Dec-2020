@@ -4,8 +4,8 @@ import (
 	"net/http"
 
 	"github.com/gin-gonic/gin"
-	"github.com/tkmagesh/IBM-Go-Dec-2020/todo-app/models"
-	"github.com/tkmagesh/IBM-Go-Dec-2020/todo-app/repository"
+	models "github.com/tkmagesh/IBM-Go-Dec-2020/todo-app/models"
+	repository "github.com/tkmagesh/IBM-Go-Dec-2020/todo-app/repository"
 )
 
 func GetTodos(c *gin.Context) {
@@ -30,7 +30,7 @@ func CreateATodo(c *gin.Context) {
 }
 
 func GetATodo(c *gin.Context) {
-	id = c.Params.ByName("id")
+	id := c.Params.ByName("id")
 	var todo models.Todo
 	err := repository.GetATodo(&todo, id)
 	if err != nil {
@@ -57,7 +57,7 @@ func UpdateATodo(c *gin.Context) {
 }
 
 func DeleteATodo(c *gin.Context) {
-	var todo Models.todo
+	var todo models.Todo
 	id := c.Params.ByName("id")
 	err := repository.DeleteATodo(&todo, id)
 	if err != nil {
