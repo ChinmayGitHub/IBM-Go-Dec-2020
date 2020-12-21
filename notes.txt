@@ -121,3 +121,6 @@ Web Server
                 read optimized
             analytical
                 processed
+
+    gin-gonic - Web framework for go applications
+    gorm - ORM for go applications
