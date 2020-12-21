@@ -126,9 +126,19 @@ Web Server
     gorm - ORM for go applications
 
 
+gRPC
+http/2
+
+protobuf compiler installation
+on mac
+brew install protobuf
+
+
+The following commands are in the setup.sh
+
 #!/bin/bash
 
 #####
-##go get -u github.com/golang/protobuf/{proto,protoc-gen-go}
-##go get -u google.golang.org/grpc
-protoc --go_out=plugins=grpc:. greet/greet/*.proto
+go get -u github.com/golang/protobuf/{proto,protoc-gen-go}
+go get -u google.golang.org/grpc
+protoc --go_out=plugins=grpc:. greet/greetpb/*.proto
