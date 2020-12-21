@@ -94,3 +94,30 @@ Language Features
     syntax = Type(Value)
 
 5. Closure
+
+Web Server
+1. Listen on a port
+2. Handle the incoming the requests
+    - static resources (html, css, js, images)
+    - dynamic resources
+        html
+            Classical Web Applications
+            use template engines to generate the html
+        json
+            Rich Internet Applications
+            HTML is generated on the client side
+            client side app is built using Angular / React / Vue.js
+            Client is a BROWSER
+
+        Application = composition of services
+
+        Data
+            transactional
+                changes frequently
+                Write optimized (maintaining the integrity of the data)
+            non-transactional
+                doesnt change frequently
+                mostly append only
+                read optimized
+            analytical
+                processed
